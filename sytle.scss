@@ -1,0 +1,17 @@
+// Importing global folder files
+@use './sass/globals/globals';
+@use './sass/globals/variables';
+
+// Importing sections folder files
+@use './sass/components/header';
+@use './sass/components/hero';
+@use './sass/components/intro';
+@use './sass/components/about';
+@use './sass/components/services';
+@use './sass/components/features';
+@use './sass/components/news';
+@use './sass/components/footer';
+
+
+
+

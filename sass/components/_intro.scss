@@ -1,0 +1,86 @@
+// Importing other files
+@use '../globals/variables' as *;
+
+
+.intro {
+    padding: 6rem 0;
+    width: 100%;
+    background-color: $lightBlue;
+
+    .container {
+
+        .icons-before,
+        .icons-after {
+            color: $light;
+            font-size: 1.5rem;
+            text-align: center;
+            // margin-left: 10rem;
+
+            i {
+                margin-right: 1.25rem;
+            }
+        }
+
+        .icons-before {
+            i {
+                margin-bottom: 5rem;
+            }
+        }
+
+        .icons-after {
+            i {
+                margin-top: 5rem;
+            }
+        }
+
+        .text {
+            color: $light;
+            line-height: 1.2;
+            text-align: center;
+            
+            span {
+                font-size: 4rem;
+                font-family: 'Belanosima', sans-serif;
+            }
+
+            .link {
+                margin-top: 2rem; 
+                text-align: center;
+
+                > a {
+                    color: $light;
+                    font-size: 1.25rem;
+                    // background-color: #dddddd33;
+                    background-color: #a7f1f02a;
+                    padding: .5rem 1rem;
+                    transition: $transition;
+                    border-radius: .25rem;
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+
+                    > i {
+                        margin-left: .25rem;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+
+// Responsive Intro
+@media (max-width: 767px) {
+    .intro {
+        // padding: 1rem;
+        .container {
+            .text {
+                span {
+                    font-size: 2rem;
+                }
+            }
+        }
+    }
+}

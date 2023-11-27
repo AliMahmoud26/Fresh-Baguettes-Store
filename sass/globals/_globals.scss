@@ -1,0 +1,47 @@
+// Importing the google fonts
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Amiri:wght@400;700&family=Bagel+Fat+One&family=Belanosima:wght@400;600;700&family=Carter+One&family=Lobster&family=Lugrasimo&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,700&family=Permanent+Marker&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font: {
+        size: 14px;
+        family: 'Open Sans', sans-serif;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+ul,li {
+    list-style: none;
+}
+
+
+// /* Small */
+// @media (min-width: 768px) {
+//     .container {
+//       width: 750px;
+//     }
+//   }
+//   /* Medium */
+//   @media (min-width: 992px) {
+//     .container {
+//       width: 970px;
+//     }
+//   }
+//   /* Large */
+//   @media (min-width: 1200px) {
+//     .container {
+//       width: 1170px;
+//     }
+//   }

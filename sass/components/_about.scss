@@ -1,0 +1,117 @@
+// Importing other files
+@use '../globals/variables' as *;
+
+
+// Styling the about section
+
+.about {
+    // padding: 6rem 6rem;
+    .content {
+        // display: flex;
+            .about-content {
+                // padding-right: -10rem;
+                display: flex;
+                // grid-template-columns: repeat(2, 1fr);
+                // gap: 2rem;
+                // margin-bottom: 4rem;
+                > .text {
+                    background-color: $brown;
+                    padding: 8rem 2rem 2rem;
+                    text-align: center;
+                    flex: 1 1 auto;
+                    color: $light;
+
+                    i {
+                        color: $light;
+                    }
+                    
+                    h4 {
+                        // color: $dark;
+                        font-size: 2rem;
+                        font-weight: normal;
+                        margin: 4rem 0;
+                        letter-spacing: .5rem;
+                    }
+
+                    p {
+                        // color: $light-gray;
+                        font-size: 1.25rem;
+                        line-height: 1.8;
+
+                        &.para-2 {
+                            margin-top: 1rem;
+                        }
+
+                        &.para-3 {
+                            margin-top: 2rem;
+                            font-size: 1.125rem;
+                        }
+                    }
+                }
+
+                .image {
+                    flex: 0 0 auto;
+                    img {
+                        // height: 600px;
+                        width: 100%;
+                        display: block;
+                    }
+                }
+            }
+        }
+}
+
+
+// Responsive about
+@media (max-width: 1200px) {
+    .about {
+        .content {
+            .about-content {
+                .image {
+                    display: none;
+                }
+
+                .text {
+                    p {  
+                        &.para-3 {
+                            padding-bottom: 3rem;
+                        }
+                    }   
+                    }
+                }
+            }
+        }
+}
+
+
+@media (max-width: 767px) {
+    .about {
+        .content {
+            .about-content {
+                .image {
+                    display: none;
+                }
+    
+                .text {
+                    h4 {
+                        font-size: 1.5rem;
+                    }
+                    
+                    p {
+                        &.para-1 {
+                            font-size: 1rem;
+                        }
+                        &.para-2 {
+                            // margin-top: 1rem;
+                            font-size: 1rem;
+                        }
+    
+                        &.para-3 {
+                            padding-bottom: 2rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

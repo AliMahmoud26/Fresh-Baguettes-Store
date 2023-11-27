@@ -1,0 +1,144 @@
+// Set of colors
+$light: #fff;
+$dark: #222;
+$light-gray: #9AA0A6;
+$light-gray2: #e7e7e7c2;
+$gold: rgba(102, 89, 8, 0.668);
+$lightBlue: #a5cdcc;
+$brown: #ab9772;
+$lightBrown: #fff9ed;
+
+// Transitions
+$transition: .4s all ease-in-out;
+
+
+// The container of the site
+.container {
+    padding: 0 1rem;
+    margin: 0 auto;
+}
+
+.title {
+    font: {
+        size: 3rem;
+        weight: normal;
+    }
+    color: $brown;
+    text-align: center;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    margin: 4rem 0;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%) rotate(-0.0025turn);
+        width: 550px;
+        height: 2px;
+        background-color: $brown;
+    }
+
+    &::before {
+        bottom: 25px;
+        transform: translateX(-50%) rotate(-0.0025turn);
+    }
+    &::after {
+        top: 40px;
+        left: 50%;
+    }
+}
+
+@media (max-width: 991px) {
+    .title {
+        font-size: 2rem;
+
+        &::before,
+        &::after {
+            width: 400px;
+        }
+
+        &::before {
+            bottom: 17px;
+            transform: translateX(-50%) rotate(-0.0025turn);
+        }
+        &::after {
+            top: 25px;
+            left: 50%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .title {
+        font-size: 1.75rem;
+
+        &::before,
+        &::after {
+            width: 370px;
+            height: 1.5px;
+        }
+
+        &::before {
+            bottom: 15px;
+            transform: translateX(-50%) rotate(-0.0025turn);
+        }
+        &::after {
+            top: 21px;
+            left: 50%;
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .title {
+        // display: none;
+        font-size: 1.5rem;
+
+        &::before {
+            bottom: 12px;
+            width: 90px;
+            transform: translateX(-50%) rotate(-0.0025turn);
+        }
+        &::after {
+            top: 21px;
+            width: 230px;
+            left: 50%;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .title {
+        font-size: 1.25rem;
+
+        &::before {
+            bottom: 12px;
+            width: 90px;
+            transform: translateX(-50%) rotate(-0.0025turn);
+        }
+        &::after {
+            top: 15px;
+            width: 230px;
+            left: 50%;
+        }
+    }
+}
+
+
+.scroll {
+    position: fixed;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    background-color: #222;
+    font-size: 1.25rem;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 10;
+    // display: none;
+  }

@@ -1,0 +1,143 @@
+// Importing other files
+@use '../globals/variables' as *;
+
+
+// Styling the services section
+
+.services {
+    background-color: $lightBrown;
+    padding: 4rem 2rem;
+
+    .container {
+        .cards {
+            display: grid;
+            // grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            
+            .card {
+                background-color: $lightBrown;
+                box-shadow: 5px 5px 5px #ab977233;
+                border-radius: .5rem;
+                transition: $transition;
+    
+                &:hover {
+                    transform: skewY(-10deg);
+                    
+                    img {
+                        transform: rotate(20deg);
+                        transition: $transition;
+                        filter: grayscale(30%);
+                    }
+                }
+    
+                .text {
+                    padding: 2rem 2rem 4rem;
+                    color: $dark;
+                    border-radius: 1rem;
+    
+                    > h2 {
+                        font-size: 2rem;
+                        font-weight: 600;
+                    }
+    
+                    > p {
+                        margin: 1rem 0 2rem;
+                        font-size: 1.25rem;
+                        line-height: 1.6;
+                    }
+    
+                    > a {
+                        color: $light;
+                        font-size: 1.25rem;
+                        background-color: $dark;
+                        padding: .5rem 1rem;
+                        transition: $transition;
+                        border-radius: .25rem;
+    
+                        &:hover {
+                            background-color: $light;
+                            color: $dark;
+                        }
+    
+                        > i {
+                            margin-left: .5rem;
+                        }
+                    }
+                }
+    
+                img {
+                    width: 100%;
+                    border-radius: .5rem .5rem 0 0;
+                    filter: grayscale(50%);
+                }
+    
+            }
+    
+        }
+    }
+}
+
+
+
+@media (max-width: 500px) {
+    .services {
+
+        .container {
+            .cards {
+                // margin: 0 auto;
+                display: flex;;
+                flex-direction: column;
+                align-items: center;
+
+                .card {
+                    .text {
+                        > h2 {
+                            font-size: 1.5rem;
+                        }
+        
+                        > p {
+                            font-size: 1rem;
+                        }
+
+                        > a {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .services {
+        padding: 4rem 0;
+
+        .title {
+            &::before,
+            &::after {
+                height: 1px;
+            }
+
+            &::before {
+                bottom: 12px;
+                width: 320px;
+                transform: translateX(-50%) rotate(-0.0025turn);
+            }
+            
+            &::after {
+                top: 15px;
+                width: 320px;
+                left: 50%;
+            }
+        }
+        
+        .container {
+            .cards {
+                margin: 0 auto;
+            }
+        }
+    }
+}

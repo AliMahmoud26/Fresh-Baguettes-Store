@@ -1,0 +1,80 @@
+// Importing other files
+@use '../globals/variables' as *;
+
+
+.footer {
+    padding: 4rem;
+    background-color: $brown;
+
+    .container {
+        
+        .boxes {
+            padding: 2rem 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            // grid-template-columns: repeat(3, 1fr);
+            // gap: 2rem;
+            .box {
+                h3 {
+                    color: white;
+                    font-size: 3rem;
+                    font-family: 'Belanosima', sans-serif;
+                    font-weight: normal;
+                    margin: 0 0 1.5rem;
+                    transition: $transition;
+                }
+
+                .link {
+                    margin-top: 5rem;
+                    a {
+                        color: $light;
+                        font-size: 1.25rem;
+                    }
+                }
+
+                .line {
+                    color: $light;
+                    font-size: 1.25rem;
+                    margin-bottom: 3rem;
+                }
+    
+                .socials {
+                    display: flex;
+    
+                    li {
+                        margin-right: .75rem;
+                        
+                        a {
+                            // background-color: $gold;
+                            color: $light;
+                            display: inline-flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: 50px;
+                            height: 50px;
+                            font-size: 2rem;
+                            transition: $transition;
+                            border: 2px solid $light;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+
+// Responsive foorter
+@media (max-width: 768px) {
+    .footer {
+
+        .boxes {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
